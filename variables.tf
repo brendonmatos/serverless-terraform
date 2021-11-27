@@ -26,5 +26,6 @@ variable "endpoints" {
     method  = string
     code    = string
     runtime = string
+    handler = string
   }))
 }

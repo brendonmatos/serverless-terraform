@@ -8,8 +8,9 @@ module "aws_lambda_endpoint" {
 
   for_each = { for endpoint in var.endpoints : endpoint.path => endpoint }
 
-  aws_lambda_name = each.value.name
-  http_path       = each.value.path
-  http_method     = each.value.method
-  code_folder     = "${each.value.code}"
+  aws_lambda_name  = each.value.name
+  http_path        = each.value.path
+  http_method      = each.value.method
+  function_handler = each.value.handler
+  code_folder      = each.value.code
 }
