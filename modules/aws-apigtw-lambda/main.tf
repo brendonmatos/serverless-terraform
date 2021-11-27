@@ -10,7 +10,7 @@ resource "aws_apigatewayv2_integration" "this" {
   api_id = var.aws_api_gateway_id
   integration_uri    = var.aws_lambda_invoke_arn
   integration_type   = "AWS_PROXY"
-  integration_method = "POST"
+  integration_method = var.http_method
 }
 
 resource "aws_apigatewayv2_route" "this" {
