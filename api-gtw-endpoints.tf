@@ -11,5 +11,5 @@ module "aws_lambda_endpoint" {
   aws_lambda_name = each.value.name
   http_path       = each.value.path
   http_method     = each.value.method
-  code_folder     = "${path.module}${each.value.code}"
+  code_folder     = "${each.value.code}"
 }
