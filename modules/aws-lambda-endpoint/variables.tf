@@ -34,4 +34,5 @@ variable "aws_role_arn" {
 
 variable "function_handler" {
   type = string
+  default = "main.handler"
 }
