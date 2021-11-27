@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "lambda_bucket" {
-  bucket        = "${var.application_id}_aws_lambdas"
+  bucket        = replace("${var.application_id}_aws_lambdas", "_", "-")
   acl           = "private"
   force_destroy = true
 }
