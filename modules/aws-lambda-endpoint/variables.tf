@@ -32,6 +32,11 @@ variable "aws_role_arn" {
   type = string
 }
 
+variable "aws_runtime" {
+  type = string
+  default = "nodejs12.x"
+}
+
 variable "function_handler" {
   type = string
   default = "main.handler"

@@ -5,6 +5,7 @@ module "aws_lambda" {
   code_folder     = var.code_folder
   aws_bucket_id   = var.aws_bucket_id
   aws_role_arn    = var.aws_role_arn
+  aws_runtime         = var.aws_runtime
   function_handler = var.function_handler
 }
 
