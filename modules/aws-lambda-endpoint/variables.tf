@@ -1,6 +1,6 @@
 
 variable "aws_api_gateway_execution_arn" {
-    type = string
+  type = string
 }
 
 variable "aws_lambda_name" {
@@ -12,22 +12,26 @@ variable "aws_api_gateway_id" {
 }
 
 variable "http_method" {
-  type = string
+  type    = string
   default = "GET"
 }
 
 variable "http_path" {
-    type = string
+  type = string
 }
 
 variable "code_folder" {
-    type = string
+  type = string
 }
 
 variable "aws_bucket_id" {
-    type = string
+  type = string
 }
 
 variable "aws_role_arn" {
-    type = string
+  type = string
+}
+
+variable "function_handler" {
+  type = string
 }

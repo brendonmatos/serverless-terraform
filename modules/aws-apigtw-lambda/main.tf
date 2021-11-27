@@ -3,8 +3,6 @@ resource "aws_lambda_permission" "this" {
   action        = "lambda:InvokeFunction"
   function_name = var.aws_lambda_name
   principal     = "apigateway.amazonaws.com"
-
-  # source_arn = "${aws_apigatewayv2_api.this.execution_arn}/*/*"
   source_arn = "${var.aws_api_gateway_execution_arn}/*/*"
 }
 

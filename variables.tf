@@ -20,11 +20,11 @@ variable "application_id" {
 
 variable "endpoints" {
   description = "Endpoints"
-  type        = list(object({
-    name = string
-    path = string
-    method = string
-    code = string
+  type = list(object({
+    name    = string
+    path    = string
+    method  = string
+    code    = string
     runtime = string
   }))
 }
