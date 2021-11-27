@@ -12,5 +12,6 @@ module "aws_lambda_endpoint" {
   http_path        = each.value.path
   http_method      = each.value.method
   function_handler = each.value.handler
+  aws_runtime =  each.value.runtime
   code_folder      = each.value.code
 }
