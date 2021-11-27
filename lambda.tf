@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "lambda_bucket" {
 }
 
 resource "aws_iam_role" "lambda_exec" {
-  name = var.application_name
+  name = var.application_id + "_iam_role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
