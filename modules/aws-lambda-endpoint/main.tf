@@ -7,6 +7,7 @@ module "aws_lambda" {
   aws_role_arn    = var.aws_role_arn
   aws_runtime      = var.aws_runtime
   function_handler = var.function_handler
+  env = var.env
 }
 
 module "aws_apigtw_integration" {
