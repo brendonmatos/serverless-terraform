@@ -27,5 +27,6 @@ variable "endpoints" {
     code    = string
     runtime = string
     handler = string
+    iam_role_arn = string
   }))
 }
