@@ -23,3 +23,7 @@ variable "function_handler" {
     default = "main.handler"
     type = string
 }
+
+variable "env" {
+  type = map(string)
+}

@@ -28,5 +28,6 @@ variable "endpoints" {
     runtime = string
     handler = string
     iam_role_arn = string
+    env = map(string)
   }))
 }

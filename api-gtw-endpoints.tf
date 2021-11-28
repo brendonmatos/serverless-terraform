@@ -14,4 +14,5 @@ module "aws_lambda_endpoint" {
   function_handler = each.value.handler
   aws_runtime =  each.value.runtime
   code_folder      = each.value.code
+  env = each.value.env
 }
