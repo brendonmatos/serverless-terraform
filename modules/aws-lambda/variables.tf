@@ -26,4 +26,5 @@ variable "function_handler" {
 
 variable "env" {
   type = map(string)
+  default = {}
 }
