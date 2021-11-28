@@ -21,13 +21,13 @@ variable "application_id" {
 variable "endpoints" {
   description = "Endpoints"
   type = list(object({
-    name    = string
-    path    = string
-    method  = string
-    code    = string
-    runtime = string
-    handler = string
+    name         = string
+    path         = string
+    method       = string
+    code         = string
+    runtime      = string
+    handler      = string
     iam_role_arn = string
-    env = map(string)
+    env          = map(string)
   }))
 }

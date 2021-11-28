@@ -24,6 +24,7 @@ resource "aws_lambda_function" "this" {
   handler = var.function_handler
   source_code_hash = data.archive_file.this.output_base64sha256
   role = var.aws_role_arn
+  
   dynamic "environment" {
     for_each = local.environment_map
     content {
