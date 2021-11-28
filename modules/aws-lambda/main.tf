@@ -13,7 +13,7 @@ resource "aws_s3_bucket_object" "this" {
 
 
 locals {
-  environment_map = var.variables == null ? [] : [var.variables]
+  environment_map = var.env == null ? [] : [var.env]
 }
 
 resource "aws_lambda_function" "this" {
