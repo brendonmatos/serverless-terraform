@@ -12,6 +12,10 @@ resource "aws_s3_bucket_object" "this" {
 }
 
 
+locals {
+  environment_map = var.variables == null ? [] : [var.variables]
+}
+
 resource "aws_lambda_function" "this" {
   function_name = var.aws_lambda_name
   s3_bucket = var.aws_bucket_id
@@ -20,8 +24,11 @@ resource "aws_lambda_function" "this" {
   handler = var.function_handler
   source_code_hash = data.archive_file.this.output_base64sha256
   role = var.aws_role_arn
-  environment {
-    variables = var.env
+  dynamic "environment" {
+    for_each = local.environment_map
+    content {
+      variables = environment.value
+    }
   }
 }
 
